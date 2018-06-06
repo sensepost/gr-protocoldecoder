@@ -6,7 +6,7 @@ This is built to read the output of the Pattern Dump block in this repo: https:/
 You'll need to build that before using the block included here.
 
 # Samples
-Theres a sample cfile and GRC graph for you to test with. Install both gr-reveng and gr-protocoldecoder, then open the current-cost.grc file and run the project. The decoding is not perfect, so you'll see some messages that can't be decoded, and how the block deals with them.
+There's a sample cfile and GRC graph for you to test with. Install both gr-reveng and gr-protocoldecoder, then view the demos in the examples/ folder.
 
 # Usage - Protocol
 You can describe a protocol by grouping bits and converting them to an appropriate value.
