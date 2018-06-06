@@ -1,12 +1,19 @@
 # GRC Protocol Decoder
-A simple way to decode a known protocol in GRC in real time.
+A simple way to decode a known protocol in GRC in real time. Once you've figured out the protocol a device uses, decoding it to view the transmitted values either requires writing them to a file and parsing them, or writing a custom GRC block to decode them in real time. This block will save you that last step, when the device you're reversing is only transmitting simple values.
+
+# Requirements
+This is built to read the output of the Pattern Dump block in this repo: https://github.com/tkuester/gr-reveng
+You'll need to build that before using the block included here.
+
+# Samples
+Theres a sample cfile and GRC graph for you to test with. Install both gr-reveng and gr-protocoldecoder, then open the current-cost.grc file and run the project. The decoding is not perfect, so you'll see some messages that can't be decoded, and how the block deals with them.
 
 # Usage - Protocol
-Describe a protocol by grouping bits and converting them to an appropriate value.
+You can describe a protocol by grouping bits and converting them to an appropriate value.
 Bits can be ignored, or optionally labelled. For example
 `ignore.4 int.4` will convert the last 4 in a sequence to an integer, and the 
 output will simply be, for example, `25`.
-Groups can be labelled without affecting anything. For example, 
+Groups can be labelled without affecting the parser. For example, 
 `ignore.4 label.deviceid int.4` will output: `deviceid:25`
 
 `ignore.4` will ignore 4 bits
