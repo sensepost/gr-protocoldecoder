@@ -1,5 +1,5 @@
 # GRC Protocol Decoder
-A simple way to decode a known protocol in GRC in real time. Once you've figured out the protocol a device uses, decoding it to view the transmitted values either requires writing them to a file and parsing them, or writing a custom GRC block to decode them in real time. This block will save you that last step, when the device you're reversing is only transmitting simple values.
+A simple way to decode a known protocol in GRC in real time. Once you've figured out the protocol a device uses, decoding it to view the transmitted values either requires writing them to a file and decoding them manually, or writing a custom GRC block to decode them in real time. This block will save you that last step, letting you quickly define a protocol so you can decode it and view transmitted values in GRC in real time.
 
 # Requirements
 This is built to read the output of the Pattern Dump block in this repo: https://github.com/tkuester/gr-reveng
